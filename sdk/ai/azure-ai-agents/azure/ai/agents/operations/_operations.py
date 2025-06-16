@@ -10,7 +10,6 @@ from collections.abc import MutableMapping
 from io import IOBase
 import json
 from typing import Any, Callable, Dict, IO, Iterable, Iterator, List, Optional, TYPE_CHECKING, TypeVar, Union, overload
-import urllib.parse
 
 from azure.core import PipelineClient
 from azure.core.exceptions import (
@@ -2459,7 +2458,7 @@ class RunsOperations:
         """
 
     @distributed_trace
-    def create(
+    def create(  # pylint: disable=too-many-locals
         self,
         thread_id: str,
         body: Union[JSON, IO[bytes]] = _Unset,
@@ -5182,7 +5181,7 @@ class AgentsClientOperationsMixin(ClientMixinABC[PipelineClient[HttpRequest, Htt
         """
 
     @distributed_trace
-    def create_agent(
+    def create_agent(  # pylint: disable=too-many-locals
         self,
         body: Union[JSON, IO[bytes]] = _Unset,
         *,
@@ -5567,7 +5566,7 @@ class AgentsClientOperationsMixin(ClientMixinABC[PipelineClient[HttpRequest, Htt
         """
 
     @distributed_trace
-    def update_agent(
+    def update_agent(  # pylint: disable=too-many-locals
         self,
         agent_id: str,
         body: Union[JSON, IO[bytes]] = _Unset,
@@ -5907,7 +5906,7 @@ class AgentsClientOperationsMixin(ClientMixinABC[PipelineClient[HttpRequest, Htt
         """
 
     @distributed_trace
-    def create_thread_and_run(
+    def create_thread_and_run(  # pylint: disable=too-many-locals
         self,
         body: Union[JSON, IO[bytes]] = _Unset,
         *,

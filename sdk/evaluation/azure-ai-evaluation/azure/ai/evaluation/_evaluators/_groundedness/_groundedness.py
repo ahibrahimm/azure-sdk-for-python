@@ -102,7 +102,7 @@ class GroundednessEvaluator(PromptyEvaluatorBase[Union[str, float]]):
     @override
     def __init__(self, model_config, *, threshold=3, credential=None, **kwargs):
         current_dir = os.path.dirname(__file__)
-        prompty_path = os.path.join(current_dir, self._PROMPTY_FILE_NO_QUERY)  # Default to no query
+        prompty_path = os.path.join(current_dir, self._PROMPTY_FILE_WITH_QUERY)  # Default to no query
 
         self._higher_is_better = True
         super().__init__(
